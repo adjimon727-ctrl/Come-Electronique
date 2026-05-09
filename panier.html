@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Panier</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+.unique{
+    color: red;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">💻 <span class="unique">Come</span>Electronique</div>
+    <nav>
+      <a href="index.html">← Continuer les achats</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>🛒 Mon Panier</h1>
+    <div id="panier-contenu">
+      <p>Votre panier est vide.</p>
+    </div>
+
+    <div class="recap-panier" id="recap-panier" style="display:none;">
+      <h3>Total : <span id="total-prix">0</span> FCFA</h3>
+      
+      <div class="formulaire-commande">
+        <h3>📦 Passer la commande (Paiement à la livraison)</h3>
+        <input type="text" id="nom-client" placeholder="Votre nom complet" required />
+        <input type="tel" id="tel-client" placeholder="Votre numéro WhatsApp / Téléphone" required />
+        <input type="text" id="adresse-client" placeholder="Votre quartier / Adresse de livraison" required />
+        <button onclick="validerCommande()" class="btn-commander">
+          ✅ Confirmer la commande
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <a href="https://wa.me/225XXXXXXXXX" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+
+  <script src="js/produits.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/panier.js"></script>
+</body>
+</html>

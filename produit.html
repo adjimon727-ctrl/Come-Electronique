@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Détail Produit</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+.unique{
+    color: red;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">💻 <span class="unique">Come</span>Electronique</div>
+    <nav>
+      <a href="index.html">← Retour aux produits</a>
+      <a href="panier.html">Panier (<span id="compteur-panier">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="container detail-produit">
+    <div class="galerie">
+      <div class="image-principale">
+        <img id="img-principale" src="" alt="PC" onclick="ouvrirLightbox()" />
+      </div>
+      <div class="miniatures" id="miniatures">
+        <!-- Miniatures injectées ici -->
+      </div>
+    </div>
+
+    <div class="infos-produit">
+      <h1 id="nom-produit"></h1>
+      <p class="prix" id="prix-produit"></p>
+      <p class="desc" id="desc-produit"></p>
+
+      <div class="specs">
+        <h3>🛠️ Caractéristiques complètes</h3>
+        <ul id="liste-specs"></ul>
+      </div>
+
+      <button class="btn-ajouter" onclick="ajouterAuPanier()">
+        🛒 Ajouter au panier (Paiement à la livraison)
+      </button>
+    </div>
+  </main>
+
+  <!-- Lightbox : affichage plein écran des photos au clic -->
+  <div id="lightbox" class="lightbox" onclick="fermerLightbox(event)">
+    <span class="fermer-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="Galerie" />
+    <div class="lightbox-controls">
+      <button onclick="changerImage(-1); event.stopPropagation();">◀ Précédent</button>
+      <button onclick="changerImage(1); event.stopPropagation();">Suivant ▶</button>
+    </div>
+  </div>
+
+  <a href="https://wa.me/0167765313?text=Bonjour%20j'ai%20une%20question" 
+     class="btn-whatsapp" target="_blank">
+    💬 Commander sur WhatsApp
+  </a>
+
+  <script src="js/produits.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/produit.js"></script>
+</body>
+</html>

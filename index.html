@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Shop PC</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+.unique{
+    color: red;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">💻 <span class="unique">Come</span>Electronique</div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="panier.html">Panier (<span id="compteur-panier">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Nos PC Disponibles</h1>
+    <div class="grille-produits" id="grille-produits">
+      <!-- Les produits sont injectés ici par JavaScript -->
+    </div>
+  </main>
+
+  <!-- Bouton WhatsApp fixe en bas -->
+  <a href="https://wa.me/67765313?text=Bonjour%20je%20suis%20intéressé%20par%20un%20PC" 
+     class="btn-whatsapp" target="_blank">
+    💬 Commander sur WhatsApp
+  </a>
+
+  <script src="js/produits.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
